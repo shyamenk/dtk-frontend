@@ -7,14 +7,14 @@ import Sidebar from "./Sidebar";
 const Layout = () => {
   return (
     <Router>
-      <div className="flex">
+      <section className="flex">
         <Sidebar />
         <Routes>
-          <Route path="/appointments" element={<Appointments />} />
           <Route path="/calendar" element={<Calendar />} />
+          <Route path="/appointments" element={<Appointments />} />
           <Route path="/summary" element={<Summary />} />
         </Routes>
-      </div>
+      </section>
     </Router>
   );
 };

@@ -44,12 +44,14 @@ const menuItems = [
 
 const Sidebar = () => {
   return (
-    <aside className="flex h-screen w-64 flex-col overflow-y-auto border-r bg-light px-5 py-8">
+    <aside className="flex w-1/4 h-screen flex-col overflow-y-auto border-r bg-light px-5 py-6">
       <div className="flex  items-center gap-2">
         <Layers3 width={40} height={46} className="text-primary" />
         <div>
-          <h2 className="text-xl font-poppins font-bold">Zendenta</h2>
-          <p className="text-sm text-neutral-200 font-poppins">
+          <h2 className="text-2xl text-neutral-100 font-poppins font-bold">
+            Zendenta
+          </h2>
+          <p className="text-sm text-neutral-200 font-poppins font-semibold">
             Modern dental Clinic
           </p>
         </div>

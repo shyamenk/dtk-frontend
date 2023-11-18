@@ -1,5 +1,11 @@
+import CaldenderHeader from "./CaldenderHeader";
+
 const Calendar = () => {
-  return <div>Calendar</div>;
+  return (
+    <section className="w-screen bg-theme">
+      <CaldenderHeader />
+    </section>
+  );
 };
 
 export default Calendar;
