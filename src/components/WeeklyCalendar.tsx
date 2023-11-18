@@ -6,28 +6,25 @@ import {
   eachHourOfInterval,
   endOfWeek,
   format,
-  isSameDay,
   parse,
-  parseISO,
   startOfDay,
   startOfToday,
   startOfWeek,
 } from "date-fns";
 import { useRef, useState } from "react";
-import { meetings } from "../data/meetings";
 
-function classNames(
-  ...classes: (string | boolean | undefined | null)[]
-): string {
-  return classes.filter(Boolean).join(" ");
-}
-export default function Example() {
+// function classNames(
+//   ...classes: (string | boolean | undefined | null)[]
+// ): string {
+//   return classes.filter(Boolean).join(" ");
+// }
+const WeeklyCalendar = () => {
   const container = useRef(null);
   const containerNav = useRef(null);
   const containerOffset = useRef(null);
 
   let today = startOfToday();
-  let [selectedDay, setSelectedDay] = useState(today);
+  // let [selectedDay, setSelectedDay] = useState(today);
   let [currentWeek, setCurrentWeek] = useState(format(today, "w"));
   let firstDayCurrentWeek = parse(currentWeek, "w", new Date());
 
@@ -46,9 +43,9 @@ export default function Example() {
     setCurrentWeek(format(firstDayNextWeek, "w"));
   }
 
-  let selectedWeekMeetings = meetings.filter((meeting) =>
-    isSameDay(parseISO(meeting.startDatetime), selectedDay)
-  );
+  // let selectedWeekMeetings = meetings.filter((meeting) =>
+  //   isSameDay(parseISO(meeting.startDatetime), selectedDay)
+  // );
 
   const startHour = 9;
   const endHour = 18;
@@ -58,7 +55,7 @@ export default function Example() {
     end: addHours(startOfDay(firstDayCurrentWeek), endHour),
   });
 
-  const startOfWeekDate = startOfWeek(firstDayCurrentWeek);
+  // const startOfWeekDate = startOfWeek(firstDayCurrentWeek);
 
   const formattedDays = days.map((day) => format(day, "E"));
   const formattedDates = days.map((day) => format(day, "d"));
@@ -236,4 +233,6 @@ export default function Example() {
       </div>
     </div>
   );
-}
+};
+
+export default WeeklyCalendar;

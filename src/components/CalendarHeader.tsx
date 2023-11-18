@@ -1,6 +1,6 @@
 import { BellRing, CalendarCheck2, Plus } from "lucide-react";
 
-const CaldenderHeader = () => {
+const CalendarHeader = () => {
   return (
     <div className="flex justify-between items-center px-10 py-6">
       <div className="flex items-center gap-4">
@@ -60,4 +60,4 @@ const CaldenderHeader = () => {
   );
 };
 
-export default CaldenderHeader;
+export default CalendarHeader;

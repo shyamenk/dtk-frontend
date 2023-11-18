@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Appointments from "../Appointments";
-import Calendar from "../Calendar";
+import CalenderView from "../CalenderView";
 import Summary from "../Summary";
 import Sidebar from "./Sidebar";
 
@@ -10,7 +10,7 @@ const Layout = () => {
       <section className="flex">
         <Sidebar />
         <Routes>
-          <Route path="/calendar" element={<Calendar />} />
+          <Route path="/calendar" element={<CalenderView />} />
           <Route path="/appointments" element={<Appointments />} />
           <Route path="/summary" element={<Summary />} />
         </Routes>
