@@ -7,35 +7,42 @@ import {
   SlidersHorizontal,
   User,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const menuItems = [
   {
     icon: <Gauge className="h-5 w-5" aria-hidden="true" />,
     text: "Overview",
+    href: "/overview",
   },
   {
     icon: <CalendarDays className="h-5 w-5" aria-hidden="true" />,
     text: "Calendar",
+    href: "/calendar",
   },
   {
     icon: <User className="h-5 w-5" aria-hidden="true" />,
     text: "Patient List",
+    href: "/patient-list",
   },
   {
     icon: <MessageCircle className="h-5 w-5" aria-hidden="true" />,
     text: "Messages",
+    href: "/messages",
   },
   {
     icon: <Banknote className="h-5 w-5" aria-hidden="true" />,
     text: "Payment Information",
+    href: "/payment-information",
   },
   {
     icon: <SlidersHorizontal className="h-5 w-5" aria-hidden="true" />,
     text: "Setting",
+    href: "/settings",
   },
 ];
 
-export function SidebarOne() {
+const Sidebar = () => {
   return (
     <aside className="flex h-screen w-64 flex-col overflow-y-auto border-r bg-light px-5 py-8">
       <div className="flex  items-center gap-2">
@@ -50,19 +57,21 @@ export function SidebarOne() {
       <div className="mt-6 flex flex-1 flex-col justify-between">
         <nav className="-mx-3 space-y-4 ">
           {menuItems.map((item, index) => (
-            <a
+            <Link
               key={index}
               className="flex transform items-center rounded-md px-4 py-3 text-neutral-100 transition-colors duration-300 hover:bg-primary hover:text-light"
-              href="/"
+              to={item.href}
             >
               {item.icon}
               <span className="mx-2 text-sm font-medium font-poppins">
                 {item.text}
               </span>
-            </a>
+            </Link>
           ))}
         </nav>
       </div>
     </aside>
   );
-}
+};
+
+export default Sidebar;
