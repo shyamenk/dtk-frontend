@@ -1,5 +1,4 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import Appointments from "../Appointments";
 import CalenderView from "../CalenderView";
 import Summary from "../Summary";
 import Sidebar from "./Sidebar";
@@ -11,7 +10,7 @@ const Layout = () => {
         <Sidebar />
         <Routes>
           <Route path="/calendar" element={<CalenderView />} />
-          <Route path="/appointments" element={<Appointments />} />
+          {/* <Route path="/appointments" element={<Appointments />} /> */}
           <Route path="/summary" element={<Summary />} />
         </Routes>
       </section>

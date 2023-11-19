@@ -1,40 +1,20 @@
 export const meetings = [
   {
     id: 1,
-    name: "Leslie Alexander",
-    startDatetime: "2023-11-11T13:00",
-    endDatetime: "2023-11-11T14:30",
+    name: "Root Canal",
+    startDatetime: new Date(new Date().setHours(10, 0, 0)).toISOString(),
+    endDatetime: new Date(new Date().setHours(11, 0, 0)).toISOString(),
   },
   {
     id: 2,
-    name: "Michael Foster",
-    imageUrl:
-      "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    startDatetime: "2023-11-20T09:00",
-    endDatetime: "2023-11-20T11:30",
+    name: "Cleaning ",
+    startDatetime: new Date(new Date().setHours(12, 0, 0)).toISOString(),
+    endDatetime: new Date(new Date().setHours(13, 0, 0)).toISOString(),
   },
   {
     id: 3,
-    name: "Dries Vincent",
-    imageUrl:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    startDatetime: "2023-11-21T17:00",
-    endDatetime: "2023-11-21T18:30",
-  },
-  {
-    id: 4,
-    name: "Leslie Alexander",
-    imageUrl:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    startDatetime: "2023-11-23T13:00",
-    endDatetime: "2023-11-23T14:30",
-  },
-  {
-    id: 5,
-    name: "Michael Foster",
-    imageUrl:
-      "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    startDatetime: "2023-11-24T14:00",
-    endDatetime: "2023-11-124T14:30",
+    name: "Tooth Pick",
+    startDatetime: new Date(new Date().setHours(14, 0, 0)).toISOString(),
+    endDatetime: new Date(new Date().setHours(16, 0, 0)).toISOString(),
   },
 ];
